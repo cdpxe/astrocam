@@ -1,4 +1,4 @@
-#AstroCam
+# AstroCam
 
 AstroCam is a C based stepper motor control system including both, a
 Perl and a PHP based webinterface (you can choose one of them). Astrocam
