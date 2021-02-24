@@ -39,11 +39,7 @@ You can download the current AstroCam version from [Freshmeat](http://freshmeat.
 
 ## Subversion / Direct Source Code Access
 
-The SVN repository is available here: <http://astrocam.svn.sourceforge.net/viewvc/astrocam/>.
-
-## Help Forums and Bug Reports
-
-You can ask questions in the [AstroCam Forums](http://sourceforge.net/forum/?group_id=85523) and you can report bugs by sending an eMail to Steffen or by writing a [bug report](http://sourceforge.net/tracker/?group_id=85523&atid=576441).
+The SVN repository is available here: <https://sourceforge.net/p/astrocam/code/HEAD/tree/>.
 
 ## Some Impressions
 
@@ -61,7 +57,7 @@ This picture is from _2007_:
 
 **Q: How does it work and how to install AstroCam?**
 
-Take a look at the [INSTALL](http://astrocam.svn.sourceforge.net/viewvc/astrocam/v2.x/INSTALL) file for installation introductions.
+Take a look at the [INSTALL](https://sourceforge.net/p/astrocam/code/HEAD/tree/v2.x/INSTALL) file for installation introductions.
 
 **Q: Please tell me more about the requirements of astrocam.**
 
