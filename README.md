@@ -45,12 +45,12 @@ The SVN repository is available here: <https://sourceforge.net/p/astrocam/code/H
 
 This is my own AstroCam, installed in _2002_. The computer is a 333 MHz AMD K6-2 with 64 MB RAM running Slackware Linux 8.0, and a webcam. The webserver is an Apache-1.x running the old astrocam 0.9-1-1 beta(?) CGI Webinterface and the old (doesn't exist anymore) gameport joystick control of the stepengine.
 
-<img src="https://www.wendzel.de/images/cdps_cam_s.jpg" width="300" />
+<a href="http://www.wendzel.de/images/cdps_cam.jpg"><img src="https://www.wendzel.de/images/cdps_cam_s.jpg" width="300" /></a>
 
 
 This picture is from _2007_:
 
-<img src="https://www.wendzel.de/images/astrocam_2007_s.jpg" width="300" />
+<a href="https://www.wendzel.de/images/astrocam_2007.jpg"><img src="https://www.wendzel.de/images/astrocam_2007.jpg" width="300" />< /a>
 
 
 ## Frequently Asked Questions (FAQ)
