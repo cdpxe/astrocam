@@ -4,7 +4,7 @@ AstroCam is a C based stepper motor control system including both, a
 Perl and a PHP based webinterface (you can choose one of them). Astrocam
 can be used for controlling webcams over the Internet/network and for
 everything else you want to do with a stepper motor.
- 
+
 <img src="https://www.wendzel.de/images/astrocam.jpg" width="400" />
 
 ## Short Project History
