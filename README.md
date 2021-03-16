@@ -35,7 +35,7 @@ All browsers with IFrame-support (e.g. Konqueror, Internet Explorer, Mozilla/Fir
 
 ## Download
 
-You can download the current AstroCam version from [Freshmeat](http://freshmeat.net/projects/astrocam/) and from [SourceForge](http://sourceforge.net/projects/astrocam).
+You can download the current AstroCam version from [SourceForge](http://sourceforge.net/projects/astrocam).
 
 ## Subversion / Direct Source Code Access
 
