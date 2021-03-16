@@ -1,0 +1,142 @@
+	HOW TO INSTALL AND CONFIGURE THE ASTROCAM SYSTEM
+	================================================
+
+	Written by Steffen Wendzel
+	(C) 2001-2009 Steffen Wendzel
+	
+	author's website: https://www.wendzel.de/
+
+1.0 Requirements
+================
+
+HINT:
+There are two options: You can either use the PHP based webinterface or the
+other one written in Perl. Both look equal and provide equal functionality.
+
+Okay, here is what you need:
+
+- An OS (Linux 2.x (tested 2.2.x, 2.4.x and 2.6.x), FreeBSD, OpenBSD or NetBSD)
+- A Webserver (e.g. Apache).
+- Server-side scripting environment:
+	* Either: PHP version 4.3.0 or newer since older versions don't support
+	  the needed IPC features. I recommend PHP 5.x.
+	* Or: CGI support for Perl
+- A SMC-800 stepmotor control card (smc-1500 could work too, but was not
+  tested!).
+- A webcam that uploads current pictures into the astrocam directory of your
+  webserver.
+
+2.0 Installation
+================
+
+-- software installation --
+
+2.1. Run Make:
+
+     # make
+
+2.2. Run install.sh:
+     This script copies the astrocam files to your webservers directory and
+     asks you a few questions to pre-configure it.
+
+     # ./install.sh
+
+-- hardware installation --
+
+2.3. Place your webcam on the stepengine (this can be a little bit tricky).
+
+2.4. Connect the stepengine with the SMC card. And connect the SMC card
+     with your computer's parallel port.
+
+2.5. Connect your power supply to the SMC card and turn it on (it does not
+     need to provide more than 10[V] or so ...).
+
+2.6. Start your webcam software and let the software place a picture file
+     on the location specified in the "picfile" configuration (see 3.0).
+     Note: You should configure the software to automatically place this
+     picture under the same name every 30 seconds or so. Other good values
+     are 2, 3, 4, 5, 10, 15 and 30 seconds, what depends on the effort of
+     your webcam and webcam software.
+
+3.0 Configuration
+=================
+
+- File: /etc/astrocam.conf
+  Syntax: <Variable-Name> <Tab> <Value>
+  
+  Variable	Info
+  ------------------------------------------------------------
+  version       The astrocam version.
+  ioport        The address of the parallel port connected to the SMC
+                stepengine card in decimal (0x378 = 888 in decimal).
+  maxdreh       Maximal position of the stepengine (so the
+                cable can't wind up AND you can hide areas).
+  mindreh       Minimal position of the stepengine.
+  maxvdreh      Maximal _vertical_ position of the stepper motor
+	        (ignore this if you only have ONE motor).
+  minvdreh	Minimal vertical cam position.
+  picfile	URL of the webcam image (examples:
+                   'http://blah.com/myfile.gif'
+		   '/astrocam/myfile.jpg'
+		   'webcam.jpg').
+  refreshtime	The time in seconds to wait before image/site reload.
+  contenturl	The location were the webinterface can find the web files
+  		(like design.css).
+  design        The webinterface-design ('design' (default) or 'darkness').
+  ipckey        The IPC key for the daemon and the webinterface.
+  negation	If you click "left" on the webinterface and
+  		your stepengine moves to the wrong direction,
+  		you can use the "negative movement" to negate
+  		all movements via the astrocam software.
+		possible values: 'on' or 'off' (default).
+  imagesize-x/y	The size of the image displayed in the webinterface
+  		in pixels for width (-x) and height(-y).
+
+4.0 Run and Test it
+===================
+
+- Start the daemon process as user 'root':
+
+  # /usr/sbin/astrocam
+       version: 2.7.6
+        iobase: 888
+       maxdreh: 50
+       mindreh: -50
+      maxvdreh: 35
+      minvdreh: -35
+       picfile: http://127.0.0.1/some-url/some-pic.jpg
+   refreshtime: 3
+    contenturl: http://127.0.0.1/apache2-default/astrocam/
+        design: design
+        ipckey: 10245
+      negation: off
+   imagesize-x: 640
+   imagesize-y: 480
+
+   using IO address 0x378...
+
+   storing astrocam process-id in /var/log/acam_pid! [4247]
+   AstroCam Daemon 2.7.6p0  [ Written and Copyright 2001-2009 by
+   Steffen Wendzel ... ] running...
+
+- Start your external Hardware by activating the connected power supply.
+
+- Now you have two choices:
+
+	1. *Either* you simply run the console test program acam_console.pl
+	   that will move your step engine to the left direction and back.
+	   If acam_console.pl prints errors, you should read the official
+	   astrocam FAQ on the website.
+
+	2. Or you use one of the webinterfaces (astrocam.php or astrocam.pl):
+
+		- Start the webcam software (see section 2.6 for details)
+
+		- Test it with your browser. Good luck!
+
+5.0 Notes
+=========
+
+If an error occurs: check the error logfile of your webserver and the errors
+printed by astrocam.php.
+

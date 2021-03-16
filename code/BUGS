@@ -1,0 +1,21 @@
+BUGS:
+
+There are no known Bugs in the current Version. Please contact me if you
+found a bug.
+
+Known security holes in older releases:
+
+MINOR_SEC  v. 2.5.0   - 2.7.3   - XSS hole in pic.php
+ CVE-2008-2075. It was possibly to execute HTML embedded script code
+ in pic.php. (01-05-08)
+
+MINOR_SEC  v. 2.0.0   - 2.6.5   - webinterface remote DoS
+ CVE-2007-1426. It was possible to shut down these astrocam versions
+ remotely via webinterface if someone writes too much data in the 'a'
+ variable, what fills up the message queue. (09-03-07)
+
+MAJOR_SEC  v. 0.9-1-1 - 1.4.0   - cgi-webinterface remote execution,
+ CVE-2002-1874. This CVE's version numbers are currently _incorrect_.
+ The version numbers in this file are the correct ones! It was
+ possibly to execute commands using a simple webinterface attack.
+

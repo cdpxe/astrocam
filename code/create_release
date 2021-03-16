@@ -1,0 +1,35 @@
+#!/bin/bash
+
+METAVER=$1
+VER=$2
+CWD=`pwd`
+
+if [[ ! $METAVER =~ ^[23]$ ]] || [ "$VER"  = "" ]; then
+	echo "usage: $0 Meta-Version Exact-version"
+	exit 1
+fi
+
+make clean
+
+TMPDIR=/tmp/astrocam-$VER
+
+rm -rf $TMPDIR
+mkdir -p $TMPDIR
+
+cp AUTHOR BUGS CHANGELOG LICENSE $TMPDIR/
+if [ "$METAVER" = "2" ]; then
+	cd v2.x
+else
+	cd v3.x
+fi
+for file in `/bin/ls`; do
+	if [ ! -d $file ]; then
+		echo $file
+		cp $file $TMPDIR/
+	fi
+done
+echo "-------------------------------------"
+
+cd $TMPDIR/..
+tar -czvf astrocam-$VER.tgz astrocam-$VER/
+
