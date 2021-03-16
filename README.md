@@ -50,7 +50,7 @@ This is my own AstroCam, installed in _2002_. The computer is a 333 MHz AMD K6-2
 
 This picture is from _2007_:
 
-<a href="https://www.wendzel.de/images/astrocam_2007.jpg"><img src="https://www.wendzel.de/images/astrocam_2007.jpg" width="300" />< /a>
+<a href="https://www.wendzel.de/images/astrocam_2007.jpg"><img src="https://www.wendzel.de/images/astrocam_2007.jpg" width="300" /></a>
 
 
 ## Frequently Asked Questions (FAQ)
