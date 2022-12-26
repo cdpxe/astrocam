@@ -54,6 +54,10 @@ This picture is from _2007_:
 
 <a href="https://www.wendzel.de/images/astrocam_2007.jpg"><img src="https://www.wendzel.de/images/astrocam_2007.jpg" width="300" /></a>
 
+## Derivatives and Users
+
+- Brandenburg University of Applied Sciences developed an own system featuring a modified version of AstroCam in 2003/2004, cf. O. Thiede, U. Dummann, R. Creutzburg: *Integration of MPEG-4 streaming server with remote control webcam in a GPRS*, Forschungsbericht FH Brandenburg 2003-2004, Teil II, 2004.
+- There were several more users/websites using AstroCam around the early 2000's but they do not seem to be up anymore.
 
 ## Frequently Asked Questions (FAQ)
 
