@@ -1,6 +1,0 @@
-- *BSD uses /usr/local/bin/bash instead of /bin/bash, but install.sh
-  has the #!/bin/bash line. This leads to errors.
-- make it possible to use the 2nd step engine for a 2nd webcam
-  instead of moving the 1st cam up/down
-- port AstroCam to amd64-linux 2.6.x
-- add new drivers to support non-smc800 hardware
